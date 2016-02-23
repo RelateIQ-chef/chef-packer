@@ -75,7 +75,7 @@ node.default['packer']['checksums'] = Hash[
     node['packer'][node['packer']['version']]['raw_checksums'].split("\n").collect { |s| s.split.reverse }
 ]
 prefix = node['packer'][node['packer']['version']]['prefix']
-filename = "#{prefix}#{node['packer']['version']}_#{node['os']}_#{node['packer']['arch']}.zip"
+filename = "#{node['packer']['version']}/#{prefix}#{node['packer']['version']}_#{node['os']}_#{node['packer']['arch']}.zip"
 node.default['packer']['dist_filename'] = filename
 node.default['packer']['checksum'] = node['packer']['checksums'][filename]
 
