@@ -1,4 +1,4 @@
-node.default['packer']['url_base'] = 'https://releases.hashicorp.com/packer'
+node.default['packer']['url_base'] = 'https://releases.hashicorp.com/packer/'
 node.default['packer']['version'] = '0.8.6'
 node.default['packer'][node.default['packer']['version']]['prefix'] = ''
 node.default['packer']['arch'] = kernel['machine'] =~ /x86_64/ ? "amd64" : "386"
@@ -75,7 +75,7 @@ node.default['packer']['checksums'] = Hash[
     node['packer'][node['packer']['version']]['raw_checksums'].split("\n").collect { |s| s.split.reverse }
 ]
 prefix = node['packer'][node['packer']['version']]['prefix']
-filename = "#{prefix}#{node['packer']['version']}_#{node['os']}_#{node['packer']['arch']}.zip"
+filename = "#{node['packer']['version']}/#{prefix}#{node['packer']['version']}_#{node['os']}_#{node['packer']['arch']}.zip"
 node.default['packer']['dist_filename'] = filename
 node.default['packer']['checksum'] = node['packer']['checksums'][filename]
 
