@@ -1,0 +1,10 @@
+false_positive: []
+mock_secret:
+- id: chef-packer://Vagrantfile_90ab4c87982b44abcddb29e185ca846dfc4928fa
+  justification: 'Mock key or false positive identified in the latest security scan, see tracking GRC 00676414'
+- id: chef-packer://Vagrantfile_58fd51127d222ab86be4303db633bf206afd47a9
+  justification: 'Mock key or false positive identified in the latest security scan, see tracking GRC 00676414'
+- id:  chef-packer://Vagrantfile_f6e3036eb1b5ca9bc13f4b0135636d5a310d1aa4
+  justification: 'Mock key or false positive identified in the latest security scan, see tracking GRC 00676414'
+non_production_secret: []
+production_secret: []
